@@ -124,7 +124,7 @@ public class MainActivity extends AppCompatActivity {
     public void ShowList(){
         myPersonList.clear();
         Cursor c = myDatabase.query("people", null, null, null, null, null, null);
-        c.moveToNext();
+        c.moveToFirst();
         Person person;
         while (!c.isAfterLast()){
             person = new Person(c.getInt(0), c.getString(1), c.getInt(2));
